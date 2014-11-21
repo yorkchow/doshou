@@ -1,6 +1,6 @@
-package me.doshou.web.service;
+package me.doshou.common.service;
 
-import me.doshou.web.repository.BaseRepository;
+import me.doshou.common.repository.BaseRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.io.Serializable;

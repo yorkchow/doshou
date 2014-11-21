@@ -1,4 +1,4 @@
-package me.doshou.web.repository;
+package me.doshou.common.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.repository.NoRepositoryBean;

@@ -1,5 +1,6 @@
 package me.doshou.web.repository;
 
+import me.doshou.common.repository.BaseRepository;
 import me.doshou.web.domain.Category;
 
 /**

@@ -1,0 +1,292 @@
+/*-----------------------------------------------------------------------------------*
+/* Superfish Drop-down Menu essential styles
+/*-----------------------------------------------------------------------------------*/
+.sf-menu-primary,.sf-menu-primary ul* {
+	margin:0;
+	padding:0;
+	list-style:none;
+	z-index:999;
+}
+
+.sf-menu-primary {
+	line-height:1;
+}
+
+.sf-menu-primary ul {
+	position:absolute;
+	top:-999em;
+/* left offset of submenus need to match (see below) */
+}
+
+.sf-menu-primary ul li {
+	width:100%;
+}
+
+.sf-menu-primary li:hover {
+	visibility:inherit;
+/* fixes IE7 'sticky bug' */
+}
+
+.sf-menu-primary li {
+	float:left;
+	position:relative;
+}
+
+.sf-menu-primary a {
+	position:relative;
+}
+
+.sf-menu-primary li:hover ul,.sf-menu-primary li.sfHover ul {
+	left:0;
+	top:74px;
+/* match top ul list item height */
+}
+
+ul.sf-menu-primary li:hover li ul,ul.sf-menu-primary li.sfHover li ul {
+	top:-999em;
+}
+
+ul.sf-menu-primary li li:hover ul,ul.sf-menu-primary li li.sfHover ul {
+	left:180px;
+/* match ul width */
+	top:-15px;
+}
+
+ul.sf-menu-primary li li:hover li ul,ul.sf-menu-primary li li.sfHover li ul {
+	top:-999em;
+}
+
+ul.sf-menu-primary li li li:hover ul,ul.sf-menu-primary li li li.sfHover ul {
+	left:15em;
+/* match ul width */
+	top:0;
+}
+
+/*-----------------------------------------------
+CURRENT MENU ITEMS AND HOVERING ON CURRENT
+-------------------------------------------------*/
+ul.sf-menu-primary ul li.current-menu-item a {
+	margin-top:0!important;
+	margin-bottom:0!important;
+	border-top:0 dotted #fff!important;
+	border-radius:0;
+	text-align:left!important;
+	border-left:0!important;
+	line-height:22px;
+}
+
+ul.sf-menu-primary ul li.current-menu-item a:hover {
+	margin-top:0!important;
+	margin-bottom:0!important;
+	text-align:left!important;
+	border-radius:0;
+	line-height:22px;
+}
+
+/*-----------------------------------------------------------------------------------------
+MENU DROPDOWN FONT ATTRIBUTES AND BACKGROUND WHEN HOVERED
+-------------------------------------------------------------------------------------------------*/
+ul.sf-menu-primary ul li:first-child {
+	border-top:0;
+}
+
+ul.sf-menu-primary ul {
+	z-index:9999;
+	border:0 solid #333;
+	border-bottom:0 solid #333;
+	border-top:0;
+	background-color:#35383a;
+}
+
+ul.sf-menu-primary ul li ul li:first-child {
+	border-top-right-radius:0;
+	border-top-left-radius:0;
+	border-top:0 solid #ddd;
+}
+
+ul.sf-menu-primary ul li:first-child a {
+	border-top:0;
+}
+
+ul.sf-menu-primary ul li:last-child a {
+	border-bottom:0!important;
+}
+
+/*controls all bottom links in each menu*/
+ul.sf-menu-primary ul li:last-child {
+}
+
+/*shell around all links*/
+ul.sf-menu-primary ul li {
+	display:block;
+	margin:0;
+	clear:both;
+	position:relative;
+	padding-left:0;
+	padding-right:0;
+	margin-top:0;
+	margin-bottom:0;
+	border:0;
+	transition-duration:.3s;
+	-moz-transition-duration:.3s;
+/* Firefox 4 */
+	-webkit-transition-duration:.3s;
+/* Safari and Chrome */
+	-o-transition-duration:.3s;
+/* Opera */
+	text-align:left!important;
+	z-index:9999;
+	border-bottom:1px solid rgba(255,255,255,0.05);
+	line-height:22px;
+}
+
+ul.sf-menu-primary ul li:last-child {
+	border-bottom:0;
+}
+
+/*inside shell of the actual wrap*/
+.sf-menu-primary ul li a {
+	display:block;
+	padding-top:10px!important;
+	padding-bottom:10px!important;
+	margin-bottom:0;
+	margin-top:0;
+	border-top:0 dotted #ddd;
+	width:180px;
+	text-align:left!important;
+	margin-left:0!important;
+	margin-right:0!important;
+	color:#c8c8c8;
+	line-height:22px!important;
+	border-radius:0!important;
+	padding-left:15px;
+	padding-right:15px;
+}
+
+/*-------------------------------------------------------------------------
+WHEN HOVERING OVER SUB MENU ITEMS
+--------------------------------------------------------------------------------*/
+ul.sf-menu-primary ul li:hover {
+	cursor:pointer;
+}
+
+/*center of the wrapping menu on hover*/
+.sf-menu-primary ul li a:hover {
+	margin-bottom:0;
+	margin-top:0;
+	border-top:0 dotted #ddd;
+	text-align:left!important;
+	margin-left:0!important;
+	background-color:rgba(0,0,0,0.10);
+	color:#efefef;
+	border-radius:0!important;
+}
+
+/*----------------------------------------------------------------------------------------------------
+END OF SUB MENUS WHEN HOVERED BEGIN TOP LEVEL MENU OR PARENT MENU
+----------------------------------------------------------------------------------------------------*/
+.sf-menu-primary {
+	float:right;
+	text-shadow:none!important;
+	margin-bottom:0;
+	border-left:0 solid #fff;
+	border-right:0 solid #999;
+	z-index:9999!important;
+}
+
+.sf-menu-primary a {
+	padding-right:10px;
+	padding-left:10px;
+	padding-top:34px;
+	padding-bottom:34px;
+	margin:0 5px;
+	text-decoration:none;
+	color:#757575;
+	text-transform:none;
+	border-top:0 solid #2d2e2e;
+	border-radius:0;
+	display:inline-block;
+	border-left:0 dotted #ededed;
+	float:left;
+}
+
+.sf-menu-primary a:hover {
+	color:#dc7075;
+	margin-top:0;
+	margin-bottom:0;
+	border-radius:0;
+}
+
+.sf-menu-primary .current-menu-item a {
+	float:left;
+	margin-top:0;
+	margin-bottom:0;
+	border-radius:0;
+}
+
+.sf-menu-primary .sfHover {
+}
+
+ul.sf-menu-primary ul li.sfHover {
+	text-align:left!important;
+}
+
+/*clearing image from the primary menus*/
+ul.sf-menu-primary ul li.sfHover:hover {
+	text-align:left!important;
+}
+
+/*clearing image menus*/
+ul.sf-menu-primary .current-menu-item ul li a {
+	display:block;
+	height:auto;
+	margin-bottom:0;
+	margin-top:0;
+	border-top:0 dotted #ddd;
+	margin-left:0!important;
+	margin-right:0!important;
+	font-weight:400!important;
+	line-height:22px;
+	border-radius:0!important;
+}
+
+ul.sf-menu-primary .current-menu-item ul li a:hover {
+	cursor:pointer;
+}
+
+.sf-menu-primary .first-menu-item a {
+	border-left:none;
+}
+
+.sub a {
+	border-left:0 solid #333;
+	text-decoration:none;
+}
+
+.sub a:hover {
+	border-left:0 solid #333;
+	text-decoration:none;
+}
+
+.sf-menu-primary ul {
+}
+
+.sf-menu li {
+}
+
+.sf-menu li li {
+}
+
+.sf-menu li li li {
+}
+
+.sf-menu li:hover,.sf-menu li.sfHover,.sf-menu a:hover,.sf-menu a:focus,.sf-menu a:active {
+	outline:0;
+}
+
+.sf-shadow ul {
+}
+
+.sf-shadow ul.sf-shadow-off {
+	background:transparent;
+}

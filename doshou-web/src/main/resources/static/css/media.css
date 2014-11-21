@@ -1,0 +1,64 @@
+/*==========MEDIA QUERIES============ */
+@media screen and (max-width:1200px) {
+	.maxmasonry {
+		max-width:100%!important;
+	}
+}
+
+@media screen and (max-width:991px) {
+	.sidebar {
+		margin:30px 0 0!important;
+	}
+	
+	.stickysidebar {
+		margin:0 0 30px!important;
+		max-width:100%!important;
+	}
+	
+	.lh-40 {
+		text-align:center!important;
+		margin:0 0 30px!important;
+	}
+	
+	.minh {
+		text-align:center;
+	}
+	
+	.social-icons li {
+		float:none!important;
+	}
+	
+	.sidebar {
+		max-width:100%!important;
+	}
+}
+
+/*end media */
+@media screen and (max-width:1024px) {
+	.responsive-trig {
+		display:block!important;
+	}
+	
+	.menuwrap {
+		display:none!important;
+	}
+	
+	.flex-caption {
+		display:none!important;
+	}
+	
+	.max-cap {
+		max-width:100%;
+	}
+	
+	@media screen and (max-width:568px) {
+	input#submit,.form-submit {
+		width:100%!important;
+	}
+	
+	input#email,input#url,input#author {
+		width:100%!important;
+	}
+}
+
+/*end media */

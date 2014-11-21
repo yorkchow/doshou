@@ -1,4 +1,4 @@
-package me.doshou.web.controller;
+package me.doshou.common.controller;
 
 
 import me.doshou.common.utils.ReflectUtils;
