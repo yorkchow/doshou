@@ -38,6 +38,8 @@ create table `product`(
   `img_url`       varchar(255) NOT NULL DEFAULT '',
   `market_price`  int(10) NOT NULL DEFAULT 0,
   `shop_price`    int(10) NOT NULL DEFAULT 0,
+  `sales`         int(10) NOT NULL DEFAULT 0,
+  `comments`      int(10) NOT NULL DEFAULT 0,
   `is_best`       tinyint(1) UNSIGNED NOT NULL DEFAULT 0,
   `is_hot`        tinyint(1) UNSIGNED NOT NULL DEFAULT 0,
   `sort_order`    smallint(5) UNSIGNED NOT NULL DEFAULT 0,

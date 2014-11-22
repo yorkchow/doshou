@@ -38,6 +38,12 @@ public class Product {
     @Column(name = "shop_price")
     private Integer shopPrice;      /** 现价 */
 
+    @Column(nullable = false)
+    private Integer sales;          /** （月）销量 */
+
+    @Column(nullable = false)
+    private Integer comments;       /** （累计）评论数 */
+
     @Column(name="is_best")
     private Boolean isBest = Boolean.FALSE;         /** 是否精品 */
 
@@ -106,6 +112,22 @@ public class Product {
 
     public void setShopPrice(Integer shopPrice) {
         this.shopPrice = shopPrice;
+    }
+
+    public Integer getSales() {
+        return sales;
+    }
+
+    public void setSales(Integer sales) {
+        this.sales = sales;
+    }
+
+    public Integer getComments() {
+        return comments;
+    }
+
+    public void setComments(Integer comments) {
+        this.comments = comments;
     }
 
     public Boolean getIsBest() {

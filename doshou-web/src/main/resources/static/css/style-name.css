@@ -1871,6 +1871,7 @@ footer .post-date {
 	margin:4px 0 0 3px;
 	width:24px;
 	height:24px;
+    padding:5px;
 	-webkit-transition:all .2s ease-in-out;
 	-moz-transition:all .2s ease-in-out;
 	-o-transition:all .2s ease-in-out;
