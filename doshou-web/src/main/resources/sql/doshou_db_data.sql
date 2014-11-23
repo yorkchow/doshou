@@ -1,61 +1,39 @@
--- DROP DATABASE IF EXISTS `doshou_db`;
+insert into category values
+(1001, '女装频道', 1, 1),
+(1002, '男装频道', 1, 2),
+(1003, '鞋包频道', 1, 3),
+(1004, '美妆频道', 1, 4),
+(1005, '家居频道', 1, 5),
+(1006, '热卖单品', 1, 6),
+(1007, '精品店铺', 0, 7);
 
-CREATE DATABASE IF NOT EXISTS `doshou_db`
-    CHARACTER SET 'utf8'
-    COLLATE 'utf8_general_ci';
+insert into product values
+(1001, 1001, '初语2014秋冬装新款套头卫衣女印花宽松大码女装长袖上衣学生绒衫', 'http://www.tmall.com', '/images/upload/1001.jpg', 53900, 17990, 2647, 1736, 1, 1, 1, 1, '2014-05-10'),
+(1002, 1001, '初语2014秋冬新款韩版中长款休闲大衣百搭正品女装外套', 'http://www.tmall.com', '/images/upload/1002.jpg', 78900, 17910, 1197, 1186, 1, 1, 1, 2, '2014-06-08'),
+(1003, 1001, '初语2014秋冬新款韩版女装宽松裤', 'http://www.tmall.com', '/images/upload/1003.jpg', 9800, 4900, 3794, 19127, 0, 0, 1, 3, '2014-07-14'),
+(1004, 1001, '初语2014秋冬新款新款撞色拼接连帽白鸭绒羽绒服', 'http://www.tmall.com', '/images/upload/1004.jpg', 109900, 48900, 2237, 6, 0, 1, 1, 4, '2014-08-18'),
+(1005, 1001, '初语2014秋冬新款钉珠修身长袖针织衫毛衣女', 'http://www.tmall.com', '/images/upload/1005.jpg', 35900, 15900, 11939, 5369, 1, 1, 1, 5, '2014-08-18'),
+(1006, 1003, '多彩汇2014新款女包手提复古潮流时尚小包甜美可爱单肩包1', 'http://www.tmall.com', '/images/upload/1006.jpg', 35600, 15900, 773, 2502, 1, 1, 1, 6, '2014-04-22'),
+(1007, 1003, '多彩汇2014新款女包手提复古潮流时尚小包甜美可爱单肩包2', 'http://www.tmall.com', '/images/upload/1007.jpg', 49800, 19900, 4732, 5241, 1, 1, 1, 7, '2014-04-27'),
+(1008, 1003, '多彩汇2014新款女包手提复古潮流时尚小包甜美可爱单肩包3', 'http://www.tmall.com', 'images/upload/1008.jpg', 22800, 20800, 3672, 22140, 1, 0, 1, 8, '2014-04-22'),
+(1009, 1003, '多彩汇2014新款女包手提复古潮流时尚小包甜美可爱单肩包4', 'http://www.tmall.com', '/images/upload/1009.jpg', 33000, 9900, 13555, 187404, 0, 1, 1, 9, '2014-05-13'),
+(1010, 1003, '多彩汇2014新款女包手提复古潮流时尚小包甜美可爱单肩包5', 'http://www.tmall.com', '/images/upload/1010.jpg', 45900, 18900, 2188, 1322, 1, 1, 1, 10, '2014-05-25'),
+(1011, 1002, '花笙记2014冬装男士棉衣外套 修身立领短款夹克棉服男防寒保暖', 'http://www.tmall.com', '/images/upload/1011.jpg', 118000, 49900, 11374, 3562, 1, 1, 1, 11, '2014-06-01'),
+(1012, 1002, '花笙记2014新款 男士韩版修身短款加厚立领休闲羽绒服', 'http://www.tmall.com', '/images/upload/1012.jpg', 102800, 32800, 31765, 10820, 1, 1, 1, 23, '2014-06-01'),
+(1013, 1002, '花笙记2014新款 修身立领男士冬装外套 短款深色白鸭绒羽绒服', 'http://www.tmall.com', '/images/upload/1013.jpg', 128000, 59900, 6257, 1658, 1, 1, 1, 12, '2014-06-12'),
+(1014, 1002, '花笙记2014新款热卖男士羊绒衫加厚深灰色纽扣高领修身针织衫男装休闲毛衣冬', 'http://www.tmall.com', '/images/upload/1014.jpg', 168000, 84000, 17, 48, 1, 1, 1, 13, '2014-06-24'),
+(1015, 1002, '花笙记2014冬装新款 男士时尚休闲外套粉色长款大衣', 'http://www.tmall.com', '/images/upload/1015.jpg', 159800, 65900, 1326, 436, 0, 0, 1, 25, '2014-08-11'),
+(1016, 1004, '御泥坊清爽平衡矿物睡眠面膜180g 水油平衡控油补水保湿免洗护肤', 'http://www.tmall.com', '/images/upload/1016.jpg', 7990, 7990, 1214, 7590, 1, 1, 1, 14, '2014-07-07'),
+(1017, 1004, 'Leelan俪兰水母变色唇霜 口红唇膏 保湿滋润 持久渐变嫩红素正品', 'http://www.tmall.com', '/images/upload/1017.jpg', 9800, 4900, 5184, 7312, 1, 1, 1, 15, '2014-07-17'),
+(1018, 1004, '卓蓝雅正品染发剂 纯植物清水黑发染发膏五贝子洗染植物染发黑色', 'http://www.tmall.com', '/images/upload/1018.jpg', 12500, 5600, 3836, 3886, 1, 1, 1, 16, '2014-07-27'),
+(1019, 1004, '朵拉纯萃毛周角化去鸡皮肤疙瘩身体乳250ml美白保湿润肤乳护体乳', 'http://www.tmall.com', '/images/upload/1019.jpg', 8900, 3900, 1150, 32547, 1, 1, 1, 17, '2014-09-10'),
+(1020, 1004, '卓蓝雅 生姜防脱洗发水套装头发生长液控油防脱发洗发水护发素', 'http://www.tmall.com', '/images/upload/1020.jpg', 25600, 10500, 3364, 6856, 1, 1, 1, 18, '2014-09-23'),
+(1021, 1005, '长鲜岛 野生海参淡干海参 高品质海参干货礼盒7-9年野生刺参 50g', 'http://www.tmall.com', '/images/upload/1021.jpg', 38800, 38800, 271, 84, 1, 0, 1, 19, '2014-10-10'),
+(1022, 1005, '【包邮】好孩子不是管出来的+好孩子不孤独(共2册)家庭幼儿教育育儿书籍', 'http://www.tmall.com', '/images/upload/1022.jpg', 6400, 2800, 59, 913, 1, 1, 1, 20, '2014-10-17'),
+(1023, 1005, '【三只松鼠_夏威夷果】零食澳洲坚果特产送开口器奶油味265gx2袋', 'http://www.tmall.com', '/images/upload/1023.jpg', 6500, 2990, 672370, 562060, 1, 1, 1, 21, '2014-10-27'),
+(1024, 1005, '【三只松鼠_碧根果】零食坚果特产美国山核桃长寿果奶油味210gx2', 'http://www.tmall.com', '/images/upload/1024.jpg', 8900, 2990, 810598, 680052, 1, 1, 1, 22, '2014-10-28'),
+(1025, 1005, '【包邮】水星家纺 被子 冬被 保暖加厚被芯 正品四孔纤维被 双人特价', 'http://www.tmall.com', '/images/upload/1025.jpg', 63000, 13800, 15106, 53712, 1, 1, 1, 24, '2014-11-11');
 
-USE `doshou_db`;
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
-
-SET FOREIGN_KEY_CHECKS=0;
-
--- -----------------------------
--- Table structure for category
--- -----------------------------
-DROP TABLE IF EXISTS `category`;
-create table `category`(
-  `id`        bigint UNSIGNED NOT NULL AUTO_INCREMENT,
-  `name`      varchar(100) NOT NULL DEFAULT '',
-  `is_show`   tinyint(1) UNSIGNED NOT NULL DEFAULT 0,
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `unique_category_name` (`name`),
-  INDEX `idx_category_is_show` (`is_show`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- -----------------------------
--- Table structure for product
--- -----------------------------
-DROP TABLE IF EXISTS `product`;
-create table `product`(
-  `id`            bigint UNSIGNED NOT NULL AUTO_INCREMENT,
-  `cat_id`        bigint NOT NULL DEFAULT 0,
-  `brief`         varchar(255) NOT NULL DEFAULT '',
-  `url`           varchar(2000) NOT NULL DEFAULT '',
-  `img_url`       varchar(255) NOT NULL DEFAULT '',
-  `market_price`  int(10) NOT NULL DEFAULT 0,
-  `shop_price`    int(10) NOT NULL DEFAULT 0,
-  `sales`         int(10) NOT NULL DEFAULT 0,
-  `comments`      int(10) NOT NULL DEFAULT 0,
-  `is_best`       tinyint(1) UNSIGNED NOT NULL DEFAULT 0,
-  `is_hot`        tinyint(1) UNSIGNED NOT NULL DEFAULT 0,
-  `sort_order`    smallint(5) UNSIGNED NOT NULL DEFAULT 0,
-  `add_date`      date NOT NULL DEFAULT 0,
-  PRIMARY KEY (`id`),
-  INDEX `idx_product_cat_id` (`cat_id`),
-  INDEX `idx_product_best_hot` (`is_best,is_hot`),
-  INDEX `idx_product_sort_order` (`sort_order`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- ---------------------------
--- Table structure for config
--- ---------------------------
-DROP TABLE IF EXISTS `config`;
-create table `config`(
-  `name`         varchar(255) NOT NULL DEFAULT '',
-  `value`        varchar(2000) NOT NULL DEFAULT '',
-  PRIMARY KEY (`name`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+insert into config values
+(1, 'title', '剁手么 有态度的电商产品评测网站'),
+(2, 'keywords', '剁手么 网购导航 双11 最好的网购导航');

@@ -25,6 +25,9 @@ public class Category {
     @Column(name = "is_show")
     private Boolean isShow;
 
+    @Column(name = "sort_order")
+    private Integer sortOrder;
+
     public Long getId() {
         return id;
     }
@@ -47,5 +50,13 @@ public class Category {
 
     public void setIsShow(Boolean isShow) {
         this.isShow = isShow;
+    }
+
+    public Integer getSortOrder() {
+        return sortOrder;
+    }
+
+    public void setSortOrder(Integer sortOrder) {
+        this.sortOrder = sortOrder;
     }
 }

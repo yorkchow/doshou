@@ -1,5 +1,6 @@
 package me.doshou.web.domain;
 
+import com.sun.org.apache.xpath.internal.operations.Bool;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
@@ -49,6 +50,9 @@ public class Product {
 
     @Column(name="is_hot")
     private Boolean isHot = Boolean.FALSE;          /** 是否热卖 */
+
+    @Column(name = "is_show")
+    private Boolean isShow = Boolean.FALSE;         /** 是否显示，删除的设置False */
 
     @Column(name = "sort_order")
     private Integer sortOrder;      /** 商品显示顺序，数字越小显示越前面 */
@@ -144,6 +148,14 @@ public class Product {
 
     public void setIsHot(Boolean isHot) {
         this.isHot = isHot;
+    }
+
+    public Boolean getIsShow() {
+        return isShow;
+    }
+
+    public void setIsShow(Boolean isShow) {
+        this.isShow = isShow;
     }
 
     public Integer getSortOrder() {

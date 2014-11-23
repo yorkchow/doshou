@@ -3504,3 +3504,7 @@ address {
 	padding:15px 0;
 }
 
+a.read-more:hover {
+    text-decoration: underline;
+}
+

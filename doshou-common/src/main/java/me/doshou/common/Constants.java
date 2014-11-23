@@ -10,4 +10,6 @@ package me.doshou.common;
 public interface Constants {
 
     String WEBSITE_TITLE = "title";
+
+    String WEBSITE_KEYWORDS = "keywords";
 }

@@ -1,7 +1,6 @@
 package me.doshou.web.domain;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
+import javax.persistence.*;
 
 /**
  * 全局配置实体类
@@ -12,6 +11,10 @@ import javax.persistence.Entity;
  */
 @Entity
 public class Config {
+
+    @Id
+    @GeneratedValue
+    private Long id;
 
     @Column(nullable = false)
     private String name;

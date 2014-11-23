@@ -2,6 +2,9 @@ package me.doshou.web.repository;
 
 import me.doshou.common.repository.BaseRepository;
 import me.doshou.web.domain.Category;
+import org.springframework.data.domain.Sort;
+
+import java.util.List;
 
 /**
  * Category Repository
@@ -11,4 +14,6 @@ import me.doshou.web.domain.Category;
  * Time: 17:28
  */
 public interface CategoryRepository extends BaseRepository<Category, Long> {
+
+    List<Category> findByIsShow(Boolean isShow, Sort sort);
 }
