@@ -1,4 +1,9 @@
 spring:
+ main:
+  show-banner: true
+ logging:
+  path: ./logs
+  file: doshou-web.log
  datasource:
   driverClassName: com.mysql.jdbc.Driver
   url: jdbc:mysql://localhost:3306/doshou_db?useUnicode=true&characterEncoding=utf-8
@@ -15,3 +20,8 @@ spring:
   time-between-eviction-runs-millis: 60000
   min-evictable-idle-time-millis: 300000
   max-wait: 60000
+ thymeleaf:
+  mode: HTML5
+  encoding: UTF-8
+  content-type: text/html
+  cache: false

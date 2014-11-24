@@ -7,6 +7,8 @@ import me.doshou.web.domain.Product;
 import me.doshou.web.service.CategoryService;
 import me.doshou.web.service.ConfigService;
 import me.doshou.web.service.ProductService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Controller;
@@ -27,6 +29,8 @@ import java.util.List;
 @RequestMapping(value = "/")
 public class ProductController extends BaseController<Product, Long> {
 
+    private static final Logger log = LoggerFactory.getLogger(ProductController.class);
+
     @Autowired
     private CategoryService categoryService;
 
@@ -40,18 +44,16 @@ public class ProductController extends BaseController<Product, Long> {
     String index(Model model) {
         model.addAttribute("title", this.configService.getValue(Constants.WEBSITE_TITLE));
         model.addAttribute("keywords", this.configService.getValue(Constants.WEBSITE_KEYWORDS));
-        /*
-        List<Category> categories = this.categoryService.findCategoriesWithSort(new Sort(Sort.Direction.ASC, "sortOrder"));
-        this.categoryService.filterForCanShow(categories);
-        */
+
         List<Category> categories = this.categoryService.findByIsShowWithSort(Boolean.TRUE,
                 new Sort(Sort.Direction.ASC, "sortOrder"));
         model.addAttribute("cats", categories);
+        log.info("Request URL: [/], cats: {}", categories);
 
         List<Product> products = this.productService.findByIsShowWithSort(Boolean.TRUE,
                 new Sort(Sort.Direction.ASC, "sortOrder"));
-        //this.productService.filterForCanShow(products);
         model.addAttribute("products", products);
+        log.info("Request URL: [/], products: {}", products);
         return "products";
     }
 
@@ -63,11 +65,12 @@ public class ProductController extends BaseController<Product, Long> {
         List<Category> categories = this.categoryService.findByIsShowWithSort(Boolean.TRUE,
                 new Sort(Sort.Direction.ASC, "sortOrder"));
         model.addAttribute("cats", categories);
+        log.info("Request URL: [/all], cats: {}", categories);
 
         List<Product> products = this.productService.findByIsShowWithSort(Boolean.TRUE,
                 new Sort(Sort.Direction.ASC, "sortOrder"));
-        //this.productService.filterForCanShow(products);
         model.addAttribute("products", products);
+        log.info("Request URL: [/all], products: {}", products);
         return "products";
     }
 
@@ -79,12 +82,13 @@ public class ProductController extends BaseController<Product, Long> {
         List<Category> categories = this.categoryService.findByIsShowWithSort(Boolean.TRUE,
                 new Sort(Sort.Direction.ASC, "sortOrder"));
         model.addAttribute("cats", categories);
+        log.info("Request URL: [/cat/{}], cats: {}", catId, categories);
 
         Category category = this.categoryService.findOne(catId);
         List<Product> products = this.productService.findProductsByCategoryAndIsShowWithSort(category, Boolean.TRUE,
                 new Sort(Sort.Direction.ASC, "sortOrder"));
-        //this.productService.filterForCanShow(products);
         model.addAttribute("products", products);
+        log.info("Request URL: [/cat/{}], products: {}", catId, products);
         return "products";
     }
 }

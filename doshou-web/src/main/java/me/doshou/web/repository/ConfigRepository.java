@@ -2,6 +2,7 @@ package me.doshou.web.repository;
 
 import me.doshou.common.repository.BaseRepository;
 import me.doshou.web.domain.Config;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.jpa.repository.Query;
 
 /**
@@ -13,6 +14,10 @@ import org.springframework.data.jpa.repository.Query;
  */
 public interface ConfigRepository extends BaseRepository<Config, Long> {
 
+    /*
     @Query("select c from Config c where c.name = ?1")
     Config getByName(String name);
+    */
+    @Cacheable("configs")
+    Config findByName(String name);
 }

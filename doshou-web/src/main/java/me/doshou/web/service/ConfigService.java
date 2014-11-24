@@ -20,6 +20,6 @@ public class ConfigService extends BaseService<Config, Long> {
     private ConfigRepository configRepository;
 
     public Config getValue(String name) {
-        return configRepository.getByName(name);
+        return configRepository.findByName(name);
     }
 }
