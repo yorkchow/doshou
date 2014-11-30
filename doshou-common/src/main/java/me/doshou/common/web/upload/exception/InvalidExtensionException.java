@@ -1,0 +1,54 @@
+package me.doshou.common.web.upload.exception;
+
+import org.apache.commons.fileupload.FileUploadException;
+
+import java.util.Arrays;
+
+/**
+ * @author YorkChow<york.chow@actionsky.com>
+ * @since 2014/11/30
+ * Time: 18:10
+ */
+public class InvalidExtensionException extends FileUploadException {
+
+    private String[] allowedExtension;
+    private String extension;
+    private String filename;
+
+    public InvalidExtensionException(String[] allowedExtension, String extension, String filename) {
+        super("filename : [" + filename + "], extension : [" + extension + "], allowed extension : [" + Arrays.toString(allowedExtension) + "]");
+        this.allowedExtension = allowedExtension;
+        this.extension = extension;
+        this.filename = filename;
+    }
+
+    public String[] getAllowedExtension() {
+        return allowedExtension;
+    }
+
+    public String getExtension() {
+        return extension;
+    }
+
+    public String getFilename() {
+        return filename;
+    }
+
+    public static class InvalidImageExtensionException extends InvalidExtensionException {
+        public InvalidImageExtensionException(String[] allowedExtension, String extension, String filename) {
+            super(allowedExtension, extension, filename);
+        }
+    }
+
+    public static class InvalidFlashExtensionException extends InvalidExtensionException {
+        public InvalidFlashExtensionException(String[] allowedExtension, String extension, String filename) {
+            super(allowedExtension, extension, filename);
+        }
+    }
+
+    public static class InvalidMediaExtensionException extends InvalidExtensionException {
+        public InvalidMediaExtensionException(String[] allowedExtension, String extension, String filename) {
+            super(allowedExtension, extension, filename);
+        }
+    }
+}
