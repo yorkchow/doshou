@@ -111,6 +111,11 @@
         </dependency>
 
         <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+        </dependency>
+
+        <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-validator</artifactId>
         </dependency>
@@ -159,6 +164,7 @@
                             <value>development</value>
                         </systemProperty>
                     </systemProperties>
+                    <stopKey/>
                 </configuration>
             </plugin>
 
