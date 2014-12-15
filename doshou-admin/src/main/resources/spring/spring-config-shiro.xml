@@ -113,6 +113,12 @@
         <property name="onlineSessionDAO" ref="onlineSessionDAO"/>
     </bean>
 
+    <bean id="jCaptchaValidateFilter" class="org.apache.shiro.web.filter.jcaptcha.JCaptchaValidateFilter">
+        <property name="jcaptchaEbabled" value="${shiro.jcaptcha.enable}"/>
+        <property name="jcaptchaParam" value="jcaptchaCode"/>
+        <property name="jcapatchaErrorUrl" value="${shiro.jcaptcha.error.url}"/>
+    </bean>
+
     <!-- 同步当前会话数据到数据库 -->
     <bean id="syncOnlineSessionFilter" class="org.apache.shiro.web.filter.sync.SyncOnlineSessionFilter">
         <property name="onlineSessionDAO" ref="onlineSessionDAO"/>
@@ -133,11 +139,13 @@
                 <entry key="sysUser" value-ref="sysUserFilter"/>
                 <entry key="onlineSession" value-ref="onlineSessionFilter"/>
                 <entry key="syncOnlineSession" value-ref="syncOnlineSessionFilter"/>
+                <entry key="jCaptchaValidate" value-ref="jCaptchaValidateFilter"/>
             </util:map>
         </property>
         <property name="filterChainDefinitions">
             <value>
                 /static/** = anon
+                /jcaptcha* = anon
                 /logout = logout
                 /login = authc
                 /** = sysUser,onlineSession,user,syncOnlineSession,perms,roles
