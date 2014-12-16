@@ -1,9 +1,8 @@
 package me.doshou.web.repository;
 
-import me.doshou.common.repository.BaseRepository;
 import me.doshou.web.domain.Config;
 import org.springframework.cache.annotation.Cacheable;
-import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.jpa.repository.JpaRepository;
 
 /**
  * Config Repository
@@ -12,7 +11,7 @@ import org.springframework.data.jpa.repository.Query;
  * @since: 2014/11/22
  * Time: 0:00
  */
-public interface ConfigRepository extends BaseRepository<Config, Long> {
+public interface ConfigRepository extends JpaRepository<Config, Long> {
 
     /*
     @Query("select c from Config c where c.name = ?1")

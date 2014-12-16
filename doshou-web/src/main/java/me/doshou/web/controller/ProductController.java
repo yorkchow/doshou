@@ -1,7 +1,7 @@
 package me.doshou.web.controller;
 
 import me.doshou.common.Constants;
-import me.doshou.common.controller.BaseController;
+import me.doshou.common.web.controller.BaseController;
 import me.doshou.web.domain.Category;
 import me.doshou.web.domain.Product;
 import me.doshou.web.service.CategoryService;

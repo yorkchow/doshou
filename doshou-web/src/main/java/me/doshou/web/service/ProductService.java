@@ -1,6 +1,5 @@
 package me.doshou.web.service;
 
-import me.doshou.common.service.BaseService;
 import me.doshou.web.domain.Category;
 import me.doshou.web.domain.Product;
 import me.doshou.web.repository.ProductRepository;
@@ -18,7 +17,7 @@ import java.util.List;
  * Time: 23:25
  */
 @Service
-public class ProductService extends BaseService<Product, Long> {
+public class ProductService {
 
     @Autowired
     private ProductRepository productRepository;

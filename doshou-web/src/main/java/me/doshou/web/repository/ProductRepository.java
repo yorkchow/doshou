@@ -1,9 +1,9 @@
 package me.doshou.web.repository;
 
-import me.doshou.common.repository.BaseRepository;
 import me.doshou.web.domain.Category;
 import me.doshou.web.domain.Product;
 import org.springframework.data.domain.Sort;
+import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;
 
@@ -14,7 +14,7 @@ import java.util.List;
  * @since: 2014/11/21
  * Time: 23:24
  */
-public interface ProductRepository extends BaseRepository<Product, Long> {
+public interface ProductRepository extends JpaRepository<Product, Long> {
 
     List<Product> findByIsShow(Boolean isShow, Sort sort);
 

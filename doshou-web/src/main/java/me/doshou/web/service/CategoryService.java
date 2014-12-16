@@ -17,7 +17,7 @@ import java.util.List;
  * Time: 22:30
  */
 @Service
-public class CategoryService extends BaseService<Category, Long> {
+public class CategoryService {
 
     @Autowired
     private CategoryRepository categoryRepository;

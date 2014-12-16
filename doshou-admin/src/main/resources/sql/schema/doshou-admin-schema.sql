@@ -270,3 +270,143 @@ create table `sys_auth`(
   INDEX `idx_sys_auth_group` (`group_id`),
   INDEX `idx_sys_auth_type` (`type`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- ------------------------------------
+-- Table structure for personal_message
+-- ------------------------------------
+DROP TABLE IF EXISTS `personal_message`;
+create table `personal_message`(
+  `id`                          bigint UNSIGNED NOT NULL AUTO_INCREMENT,
+  `sender_id`                   bigint UNSIGNED NOT NULL DEFAULT 0,
+  `receiver_id`                 bigint UNSIGNED NOT NULL DEFAULT 0,
+  `send_date`                   timestamp default 0,
+  `title`                       varchar(200) NOT NULL DEFAULT '',
+  `sender_state`                varchar(20) NOT NULL DEFAULT '',
+  `sender_state_change_date`    timestamp  default 0,
+  `receiver_state`              varchar(20) NOT NULL DEFAULT '',
+  `receiver_state_change_date`  timestamp  default 0,
+  `type`                        varchar(20) NOT NULL DEFAULT '',
+  `is_read`                     tinyint(1) UNSIGNED NOT NULL DEFAULT 0,
+  `is_replied`                  tinyint(1) UNSIGNED NOT NULL DEFAULT 0,
+  `parent_id`                   bigint UNSIGNED NOT NULL DEFAULT 0,
+  `parent_ids`                  varchar(200) NOT NULL DEFAULT '',
+  PRIMARY KEY (`id`),
+  INDEX `idx_personal_message_sender_id_sender_state` (`sender_id`, `sender_state`),
+  INDEX `idx_personal_message_receiver_id_receiver_state` (`receiver_id`, `receiver_state`,`is_read`),
+  INDEX `idx_personal_sender_state_change_date` (`sender_state_change_date`),
+  INDEX `idx_personal_receiver_state_change_date` (`receiver_state_change_date`),
+  INDEX `idx_personal_parent_id` (`parent_id`),
+  INDEX `idx_personal_parent_ids` (`parent_ids`),
+  INDEX `idx_personal_message_type` (`type`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------
+-- Table structure for personal_message_content
+-- --------------------------------------------
+DROP TABLE IF EXISTS `personal_message_content`;
+create table `personal_message_content`(
+  `id`               bigint UNSIGNED NOT NULL AUTO_INCREMENT,
+  `message_id`       bigint UNSIGNED NOT NULL DEFAULT 0,
+  `content`          longtext,
+  PRIMARY KEY (`id`),
+  INDEX `idx_personal_message_content_message_id` (`message_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- -------------------------------------
+-- Table structure for personal_calendar
+-- -------------------------------------
+DROP TABLE IF EXISTS `personal_calendar`;
+create table `personal_calendar`(
+  `id`                bigint UNSIGNED NOT NULL AUTO_INCREMENT,
+  `user_id`           bigint UNSIGNED NOT NULL DEFAULT 0,
+  `title`             varchar(500) NOT NULL DEFAULT '',
+  `details`           varchar(1000) NOT NULL DEFAULT '',
+  `start_date`        date,
+  `length`            int UNSIGNED NOT NULL DEFAULT 0,
+  `start_time`        time,
+  `end_time`          time,
+  `background_color`  varchar(100) NOT NULL DEFAULT '',
+  `text_color`        varchar(100) NOT NULL DEFAULT '',
+  PRIMARY KEY (`id`),
+  INDEX `office_calendar_user_id_start_date` (user_id, start_date)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- ---------------------------------
+-- Table structure for maintain_icon
+-- ---------------------------------
+DROP TABLE IF EXISTS `maintain_icon`;
+create table `maintain_icon`(
+  `id`          bigint UNSIGNED NOT NULL AUTO_INCREMENT,
+  `identity`    varchar(100) NOT NULL DEFAULT '',
+  `css_class`   varchar(100) NOT NULL DEFAULT '',
+  `img_src`     varchar(200) NOT NULL DEFAULT '',
+  `width`       smallint UNSIGNED NOT NULL DEFAULT 0,
+  `height`      smallint UNSIGNED NOT NULL DEFAULT 0,
+  `sprite_src`  varchar(200) NOT NULL DEFAULT '',
+  `left`        smallint NOT NULL DEFAULT 0,
+  `top`         smallint NOT NULL DEFAULT 0,
+  `style`       varchar(100) NOT NULL DEFAULT '',
+  `type`        varchar(30) NOT NULL DEFAULT '',
+  `description` varchar(100) NOT NULL DEFAULT '',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `unique_maintain_icon_identity` (`identity`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- ---------------------------------
+-- Table structure for maintain_map
+-- ---------------------------------
+DROP TABLE IF EXISTS `maintain_map`;
+create table `maintain_map`(
+  `id`        bigint UNSIGNED NOT NULL AUTO_INCREMENT,
+  `map_key`   varchar(200) NOT NULL DEFAULT '',
+  `map_value` varchar(500) NOT NULL DEFAULT '',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `unique_maintain_map_key` (`map_key`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------
+-- Table structure for maintain_notification_template
+-- --------------------------------------------------
+DROP TABLE IF EXISTS `maintain_notification_template`;
+create table `maintain_notification_template`(
+  `id`        bigint UNSIGNED NOT NULL AUTO_INCREMENT,
+  `name`      varchar(200) NOT NULL DEFAULT '',
+  `system`    varchar(50) NOT NULL DEFAULT '',
+  `title`     varchar(600) NOT NULL DEFAULT '',
+  `template`  varchar(2000) NOT NULL DEFAULT '',
+  `deleted`   tinyint(1) UNSIGNED NOT NULL DEFAULT 0,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `unique_maintain_notification_template_name` (`name`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- ----------------------------------------------
+-- Table structure for maintain_notification_data
+-- ----------------------------------------------
+DROP TABLE IF EXISTS `maintain_notification_data`;
+create table `maintain_notification_data`(
+  `id`      bigint UNSIGNED NOT NULL AUTO_INCREMENT,
+  `user_id` bigint UNSIGNED NOT NULL DEFAULT 0,
+  `system`  varchar(50) NOT NULL DEFAULT '',
+  `title`   varchar(600) NOT NULL DEFAULT '',
+  `content` varchar(2000) NOT NULL DEFAULT '',
+  `date`    timestamp default 0,
+  `is_read` tinyint(1) UNSIGNED NOT NULL DEFAULT 0,
+  PRIMARY KEY (`id`),
+  INDEX `idx_maintain_notification_data_user_id_read` (`user_id`, `is_read`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------
+-- Table structure for maintain_task_definition
+-- --------------------------------------------
+DROP TABLE IF EXISTS `maintain_task_definition`;
+create table `maintain_task_definition`(
+  `id`              bigint UNSIGNED NOT NULL AUTO_INCREMENT,
+  `name`            varchar(500) NOT NULL DEFAULT '',
+  `cron`            varchar(200) NOT NULL DEFAULT '',
+  `bean_class`      varchar(200) NOT NULL DEFAULT '',
+  `bean_name`       varchar(200) NOT NULL DEFAULT '',
+  `method_name`     varchar(200) NOT NULL DEFAULT '',
+  `is_start`        tinyint(1) UNSIGNED NOT NULL DEFAULT 0,
+  `description`     varchar(2000) NOT NULL DEFAULT '',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
