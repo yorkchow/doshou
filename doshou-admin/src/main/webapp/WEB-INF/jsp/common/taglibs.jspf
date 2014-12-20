@@ -9,5 +9,5 @@
 <%@taglib prefix="doshou" tagdir="/WEB-INF/tags" %>
 <%@taglib prefix="sys" tagdir="/WEB-INF/tags/sys" %>
 <%@taglib prefix="maintain" tagdir="/WEB-INF/tags/maintain" %>
-<%--<%@taglib prefix="dsform" uri="http://www.doshou.me/tags/doshou-form" %>--%>
+<%@taglib prefix="dsform" uri="http://www.doshou.me/tags/doshou-form" %>
 <%@taglib prefix="dsfn" uri="http://www.doshou.me/tags/doshou-functions" %>

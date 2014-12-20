@@ -3,6 +3,7 @@ package me.doshou.common.web.controller;
 
 import me.doshou.common.utils.ReflectUtils;
 import org.springframework.core.annotation.AnnotationUtils;
+import org.springframework.ui.Model;
 import org.springframework.util.Assert;
 import org.springframework.util.StringUtils;
 import org.springframework.validation.BindingResult;
@@ -29,6 +30,14 @@ public abstract class BaseController<M, ID extends Serializable> {
     protected BaseController() {
         this.entityClass = ReflectUtils.findParameterizedType(getClass(), 0);
         setViewPrefix(defaultViewPrefix());
+    }
+
+    /**
+     * 设置通用数据
+     *
+     * @param model
+     */
+    protected void setCommonData(Model model) {
     }
 
     /**

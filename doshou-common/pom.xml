@@ -109,6 +109,11 @@
         </dependency>
 
         <dependency>
+            <groupId>javax.servlet.jsp</groupId>
+            <artifactId>jsp-api</artifactId>
+        </dependency>
+
+        <dependency>
             <groupId>org.ocpsoft.prettytime</groupId>
             <artifactId>prettytime</artifactId>
         </dependency>
@@ -131,6 +136,11 @@
         <dependency>
             <groupId>com.octo.captcha</groupId>
             <artifactId>jcaptcha-integration-simple-servlet</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-validator</artifactId>
         </dependency>
 
         <!-- 测试相关jar包 -->
