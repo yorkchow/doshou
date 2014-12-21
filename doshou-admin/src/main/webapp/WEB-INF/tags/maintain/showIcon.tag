@@ -9,12 +9,12 @@
             <i class="${icon.cssClass}"></i>
         </c:when>
         <c:when test="${not empty icon.imgSrc}">
-            <%--<es:showAttachment filename="${icon.imgSrc}" showImage="true" width="${icon.width}" height="${icon.height}"/>--%>
+            <%--<doshou:showAttachment filename="${icon.imgSrc}" showImage="true" width="${icon.width}" height="${icon.height}"/>--%>
             <%--&nbsp;&nbsp;--%>
             <i class="${icon.identity}" title="生成后的图标"></i>
         </c:when>
         <c:when test="${not empty icon.spriteSrc}">
-            <%--<es:showAttachment filename="${icon.spriteSrc}" showImage="true" width="${icon.width}" height="${icon.height}" left="${icon.left}" top="${icon.top}"/>--%>
+            <%--<doshou:showAttachment filename="${icon.spriteSrc}" showImage="true" width="${icon.width}" height="${icon.height}" left="${icon.left}" top="${icon.top}"/>--%>
             <%--&nbsp;&nbsp;--%>
             <i class="${icon.identity}" title="生成后的图标"></i>
         </c:when>

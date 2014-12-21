@@ -49,7 +49,8 @@ public class User extends BaseEntity<Long> implements LogicDeleteable {
 
     @NotEmpty(message = "{not.null}")
     @Pattern(regexp = MOBILE_PHONE_NUMBER_PATTERN, message = "{user.mobile.phone.number.not.valid}")
-    private String mobile;
+    @Column(name = "mobile_phone_number")
+    private String mobilePhoneNumber;
 
     /**
      * 使用md5(username + original password + salt)加密存储
@@ -216,12 +217,12 @@ public class User extends BaseEntity<Long> implements LogicDeleteable {
         this.email = email;
     }
 
-    public String getMobile() {
-        return mobile;
+    public String getMobilePhoneNumber() {
+        return mobilePhoneNumber;
     }
 
-    public void setMobile(String mobile) {
-        this.mobile = mobile;
+    public void setMobilePhoneNumber(String mobilePhoneNumber) {
+        this.mobilePhoneNumber = mobilePhoneNumber;
     }
 
     public Boolean getAdmin() {

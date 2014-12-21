@@ -15,7 +15,6 @@ import me.doshou.admin.sys.user.entity.UserStatus;
 import me.doshou.admin.sys.user.service.UserService;
 import me.doshou.admin.sys.user.web.bind.annotation.CurrentUser;
 import org.apache.commons.lang3.ArrayUtils;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -271,7 +270,7 @@ public class UserController extends BaseCRUDController<User, Long> {
 
         if ("mobilePhoneNumber".equals(fieldId)) {
             User user = getUserService().findByMobilePhoneNumber(fieldValue);
-            if (user == null || (user.getId().equals(id) && user.getMobile().equals(fieldValue))) {
+            if (user == null || (user.getId().equals(id) && user.getMobilePhoneNumber().equals(fieldValue))) {
                 //如果msg 不为空 将弹出提示框
                 response.validateSuccess(fieldId, "");
             } else {

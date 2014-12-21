@@ -3,7 +3,7 @@
 <doshou:contentHeader/>
 <div class="panel">
     <br/>
-    <es:showMessage errorMessage="${error.message}"/>
+    <doshou:showMessage errorMessage="${error.message}"/>
     <c:set var="stackTrace" value="${error.stackTrace}"/>
     <%@include file="exceptionDetails.jsp"%>
 </div>

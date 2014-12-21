@@ -11,84 +11,84 @@
             overflowToDisk="false">
     </defaultCache>
 
-    <cache name="com.sishuok.es.sys.user.entity.User"
+    <cache name="me.doshou.admin.sys.user.entity.User"
            maxEntriesLocalHeap="2000"
            eternal="false"
            timeToIdleSeconds="3600"
            timeToLiveSeconds="3600"
            overflowToDisk="false">
     </cache>
-    <cache name="com.sishuok.es.sys.user.entity.User.organizationJobs"
+    <cache name="me.doshou.admin.sys.user.entity.User.organizationJobs"
            maxEntriesLocalHeap="2000"
            eternal="false"
            timeToIdleSeconds="3600"
            timeToLiveSeconds="3600"
            overflowToDisk="false">
     </cache>
-    <cache name="com.sishuok.es.sys.user.entity.UserOrganizationJob"
+    <cache name="me.doshou.admin.sys.user.entity.UserOrganizationJob"
            maxEntriesLocalHeap="2000"
            eternal="false"
            timeToIdleSeconds="3600"
            timeToLiveSeconds="3600"
            overflowToDisk="false">
     </cache>
-    <cache name="com.sishuok.es.sys.organization.entity.Job"
+    <cache name="me.doshou.admin.sys.organization.entity.Job"
            maxEntriesLocalHeap="2000"
            eternal="false"
            timeToIdleSeconds="3600"
            timeToLiveSeconds="3600"
            overflowToDisk="false">
     </cache>
-    <cache name="com.sishuok.es.sys.organization.entity.Organization"
+    <cache name="me.doshou.admin.sys.organization.entity.Organization"
            maxEntriesLocalHeap="2000"
            eternal="false"
            timeToIdleSeconds="3600"
            timeToLiveSeconds="3600"
            overflowToDisk="false">
     </cache>
-    <cache name="com.sishuok.es.sys.permission.entity.Permission"
+    <cache name="me.doshou.admin.sys.permission.entity.Permission"
            maxEntriesLocalHeap="2000"
            eternal="false"
            timeToIdleSeconds="3600"
            timeToLiveSeconds="3600"
            overflowToDisk="false">
     </cache>
-    <cache name="com.sishuok.es.sys.permission.entity.Role"
+    <cache name="me.doshou.admin.sys.permission.entity.Role"
            maxEntriesLocalHeap="2000"
            eternal="false"
            timeToIdleSeconds="3600"
            timeToLiveSeconds="3600"
            overflowToDisk="false">
     </cache>
-    <cache name="com.sishuok.es.sys.group.entity.Group"
+    <cache name="me.doshou.admin.sys.group.entity.Group"
            maxEntriesLocalHeap="2000"
            eternal="false"
            timeToIdleSeconds="3600"
            timeToLiveSeconds="3600"
            overflowToDisk="false">
     </cache>
-    <cache name="com.sishuok.es.sys.resource.entity.Resource"
+    <cache name="me.doshou.admin.sys.resource.entity.Resource"
            maxEntriesLocalHeap="2000"
            eternal="false"
            timeToIdleSeconds="3600"
            timeToLiveSeconds="3600"
            overflowToDisk="false">
     </cache>
-    <cache name="com.sishuok.es.sys.permission.entity.RoleResourcePermission"
+    <cache name="me.doshou.admin.sys.permission.entity.RoleResourcePermission"
            maxEntriesLocalHeap="2000"
            eternal="false"
            timeToIdleSeconds="3600"
            timeToLiveSeconds="3600"
            overflowToDisk="false">
     </cache>
-    <cache name="com.sishuok.es.sys.permission.entity.Role.resourcePermissions"
+    <cache name="me.doshou.admin.sys.permission.entity.Role.resourcePermissions"
            maxEntriesLocalHeap="2000"
            eternal="false"
            timeToIdleSeconds="3600"
            timeToLiveSeconds="3600"
            overflowToDisk="false">
     </cache>
-    <cache name="com.sishuok.es.sys.auth.entity.Auth"
+    <cache name="me.doshou.admin.sys.auth.entity.Auth"
            maxEntriesLocalHeap="2000"
            eternal="false"
            timeToIdleSeconds="3600"
@@ -96,14 +96,14 @@
            overflowToDisk="false">
     </cache>
 
-    <cache name="com.sishuok.es.sys.user.entity.UserOnline"
+    <cache name="me.doshou.admin.sys.user.entity.UserOnline"
            maxEntriesLocalHeap="2000"
            eternal="false"
            timeToIdleSeconds="3600"
            timeToLiveSeconds="3600"
            overflowToDisk="false">
     </cache>
-    <cache name="com.sishuok.es.sys.user.entity.UserLastOnline"
+    <cache name="me.doshou.admin.sys.user.entity.UserLastOnline"
            maxEntriesLocalHeap="2000"
            eternal="false"
            timeToIdleSeconds="3600"

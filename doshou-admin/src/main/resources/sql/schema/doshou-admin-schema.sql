@@ -20,16 +20,16 @@ SET FOREIGN_KEY_CHECKS=0;
 -- -----------------------------
 DROP TABLE IF EXISTS `sys_user`;
 create table `sys_user`(
-  `id`          bigint UNSIGNED NOT NULL AUTO_INCREMENT,
-  `username`    varchar(100) NOT NULL DEFAULT '',
-  `email`       varchar(100) NOT NULL DEFAULT '',
-  `mobile`      varchar(20) NOT NULL DEFAULT '',
-  `password`    varchar(100) NOT NULL DEFAULT '',
-  `salt`        varchar(10) NOT NULL DEFAULT '',
-  `create_date` timestamp NOT NULL DEFAULT 0,
-  `status`      enum('normal','blocked') NOT NULL DEFAULT 'normal',
-  `deleted`     tinyint(1) UNSIGNED NOT NULL DEFAULT 0,
-  `admin`       tinyint(1) UNSIGNED NOT NULL DEFAULT 0,
+  `id`                  bigint UNSIGNED NOT NULL AUTO_INCREMENT,
+  `username`            varchar(100) NOT NULL DEFAULT '',
+  `email`               varchar(100) NOT NULL DEFAULT '',
+  `mobile_phone_number` varchar(20) NOT NULL DEFAULT '',
+  `password`            varchar(100) NOT NULL DEFAULT '',
+  `salt`                varchar(10) NOT NULL DEFAULT '',
+  `create_date`         timestamp NOT NULL DEFAULT 0,
+  `status`              enum('normal','blocked') NOT NULL DEFAULT 'normal',
+  `deleted`             tinyint(1) UNSIGNED NOT NULL DEFAULT 0,
+  `admin`               tinyint(1) UNSIGNED NOT NULL DEFAULT 0,
   PRIMARY KEY (`id`),
   UNIQUE KEY `unique_sys_user_username_email` (`username`,`email`),
   INDEX `idx_sys_user_status` (`status`)

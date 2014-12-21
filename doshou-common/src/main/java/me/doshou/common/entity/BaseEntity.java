@@ -10,6 +10,7 @@ import java.io.Serializable;
  * @since 2014/11/30
  * Time: 20:19
  */
+@MappedSuperclass
 public abstract class BaseEntity<ID extends Serializable> extends AbstractEntity<ID> {
 
     @Id

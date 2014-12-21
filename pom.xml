@@ -27,6 +27,7 @@
         <junit.version>4.11</junit.version>
         <mysql.driver.version>5.1.33</mysql.driver.version>
         <spring.boot.version>1.1.9.RELEASE</spring.boot.version>
+        <spring.data.jpa.version>1.4.1.RELEASE</spring.data.jpa.version>
         <logback.version>1.1.2</logback.version>
         <druid.version>1.0.9</druid.version>
         <fastjson.version>1.1.41</fastjson.version>
@@ -38,13 +39,21 @@
         <jsp.version>2.2</jsp.version>
         <common.fileupload.version>1.3.1</common.fileupload.version>
         <commons-lang3.version>3.3.2</commons-lang3.version>
+        <common-collections4.version>4.0</common-collections4.version>
+        <common.compress.version>1.6</common.compress.version>
+        <commons-io.version>2.4</commons-io.version>
         <hibernate.validator.version>5.1.3.Final</hibernate.validator.version>
+        <hibernate.core.version>4.3.7.Final</hibernate.core.version>
+        <hibernate.ehcache.version>4.3.7.Final</hibernate.ehcache.version>
+        <hibernate.commons.annotaions.version>4.0.5.Final</hibernate.commons.annotaions.version>
+        <javassist.version>3.18.2-GA</javassist.version>
         <aspectj.version>1.8.2</aspectj.version>
         <ehcache.core.version>2.6.9</ehcache.core.version>
         <mockito.version>1.9.5</mockito.version>
         <prettytime.version>3.2.3.Final</prettytime.version>
         <joda-time.version>2.3</joda-time.version>
         <jcaptcha.version>2.0-alpha-1</jcaptcha.version>
+        <jsoup.version>1.7.3</jsoup.version>
     </properties>
 
     <repositories>
@@ -162,6 +171,18 @@
                 <scope>import</scope>
             </dependency>
 
+            <dependency>
+                <groupId>org.springframework.data</groupId>
+                <artifactId>spring-data-jpa</artifactId>
+                <version>${spring.data.jpa.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <artifactId>jcl-over-slf4j</artifactId>
+                        <groupId>org.slf4j</groupId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+
             <!-- begin jdbc library -->
             <dependency>
                 <groupId>mysql</groupId>
@@ -177,6 +198,76 @@
             <!-- end jdbc -->
 
             <!-- begin hibernate library -->
+            <dependency>
+                <groupId>org.hibernate</groupId>
+                <artifactId>hibernate-core</artifactId>
+                <version>${hibernate.core.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>commons-logging</groupId>
+                        <artifactId>commons-logging</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>javassist</groupId>
+                        <artifactId>javassist</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+
+            <dependency>
+                <groupId>org.hibernate</groupId>
+                <artifactId>hibernate-entitymanager</artifactId>
+                <version>${hibernate.core.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.javassist</groupId>
+                <artifactId>javassist</artifactId>
+                <version>${javassist.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>commons-logging</groupId>
+                        <artifactId>commons-logging</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+
+            <dependency>
+                <groupId>org.hibernate</groupId>
+                <artifactId>hibernate-ehcache</artifactId>
+                <version>${hibernate.ehcache.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>commons-logging</groupId>
+                        <artifactId>commons-logging</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <artifactId>ehcache-core</artifactId>
+                        <groupId>net.sf.ehcache</groupId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+
+            <dependency>
+                <groupId>org.hibernate.common</groupId>
+                <artifactId>hibernate-commons-annotations</artifactId>
+                <version>${hibernate.commons.annotaions.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>commons-logging</groupId>
+                        <artifactId>commons-logging</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.hibernate</groupId>
+                        <artifactId>hibernate</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>commons-logging</groupId>
+                        <artifactId>commons-logging</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+
             <dependency>
                 <groupId>org.hibernate</groupId>
                 <artifactId>hibernate-validator</artifactId>
@@ -257,6 +348,12 @@
 
             <!-- begin utils library -->
             <dependency>
+                <groupId>commons-io</groupId>
+                <artifactId>commons-io</artifactId>
+                <version>${commons-io.version}</version>
+            </dependency>
+
+            <dependency>
                 <groupId>com.google.guava</groupId>
                 <artifactId>guava</artifactId>
                 <version>${guava.version}</version>
@@ -272,6 +369,24 @@
                 <groupId>org.apache.commons</groupId>
                 <artifactId>commons-lang3</artifactId>
                 <version>${commons-lang3.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-collections4</artifactId>
+                <version>${common-collections4.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-compress</artifactId>
+                <version>${common.compress.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>commons-codec</groupId>
+                <artifactId>commons-codec</artifactId>
+                <version>1.10</version>
             </dependency>
 
             <dependency>
@@ -318,6 +433,13 @@
                 </exclusions>
             </dependency>
             <!-- end jcaptcha -->
+
+            <!-- html处理jar包 -->
+            <dependency>
+                <groupId>org.jsoup</groupId>
+                <artifactId>jsoup</artifactId>
+                <version>${jsoup.version}</version>
+            </dependency>
 
             <!-- begin testing library -->
             <dependency>

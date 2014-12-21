@@ -70,7 +70,7 @@
     <%@include file="listTable.jsp"%>
 
 </div>
-<es:contentFooter/>
+<doshou:contentFooter/>
 <%@include file="/WEB-INF/jsp/common/admin/import-personal-js.jspf"%>
 <script type="text/javascript">
     $(function() {

@@ -49,7 +49,7 @@
         <%@include file="menu.jsp"%>
     </div>
 </div>
-<es:contentFooter/>
+<doshou:contentFooter/>
 <script type="text/javascript">
     $(function() {
         $.app.initIndex();

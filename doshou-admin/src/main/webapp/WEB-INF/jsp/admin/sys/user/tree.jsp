@@ -17,7 +17,7 @@
 <div id="organizationTree" class="scroll-pane"></div>
 
 <div id="jobTree" class="scroll-pane"></div>
-<es:contentFooter/>
+<doshou:contentFooter/>
 <%@include file="/WEB-INF/jsp/common/import-zTree-js.jspf"%>
 
 <script type="text/javascript">

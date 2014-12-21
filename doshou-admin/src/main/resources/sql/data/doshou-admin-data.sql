@@ -1,7 +1,7 @@
 truncate table `sys_user`;
 /*默认admin/123456*/
 insert into `sys_user`
-(`id`,`username`,`email`,`mobile`,`password`,`salt`,`create_date`,`status`,,`deleted`,`admin`)
+(`id`,`username`,`email`,`mobile_phone_number`,`password`,`salt`,`create_date`,`status`,`deleted`,`admin`)
 values
 (1,'admin','admin@sishuok.com','13412345671','ec21fa1738f39d5312c6df46002d403d','yDd1956wn1',sysdate(),'normal',0,1);
 
@@ -86,8 +86,8 @@ insert into `sys_role_resource_permission` (`id`, `role_id`, `resource_id`, `per
 (14, 6, 27, '4,5'),
 (15, 7, 2, '5'),
 (16, 7, 20, '5'),
-(16, 7, 27, '5'),
-(17, 9, 27, '1');
+(17, 7, 27, '5'),
+(18, 9, 27, '1');
 
 truncate table `sys_auth`;
 insert into sys_auth (`id`, `organization_id`, `job_id`, `user_id`, `group_id`, `role_ids`, `type`)

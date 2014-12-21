@@ -92,7 +92,7 @@ public class LoginUserController extends BaseController<User, Long> {
         }
 
         user.setEmail(email);
-        user.setMobile(mobilePhoneNumber);
+        user.setMobilePhoneNumber(mobilePhoneNumber);
         userService.update(user);
 
         redirectAttributes.addFlashAttribute(Constants.MESSAGE, "修改个人资料成功");

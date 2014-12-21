@@ -52,7 +52,7 @@ public class RepositoryHelper {
 
     public static EntityManager getEntityManager() {
         Assert.notNull(entityManager, "entityManager must null, please see " +
-                "[com.sishuok.es.common.repository.RepositoryHelper#setEntityManagerFactory]");
+                "[me.doshou.common.repository.RepositoryHelper#setEntityManagerFactory]");
 
         return entityManager;
     }
@@ -69,10 +69,10 @@ public class RepositoryHelper {
 
     /**
      * <p>ql条件查询<br/>
-     * searchCallback默认实现请参考 {@see com.sishuok.es.common.repository.callback.DefaultSearchCallback}<br/>
+     * searchCallback默认实现请参考 {@see me.doshou.common.repository.callback.DefaultSearchCallback}<br/>
      * <p/>
-     * 测试用例请参考：{@see com.sishuok.es.common.repository.UserRepositoryImplForCustomSearchIT}
-     * 和{@see com.sishuok.es.common.repository.UserRepositoryImplForDefaultSearchIT}
+     * 测试用例请参考：{@see me.doshou.common.repository.UserRepositoryImplForCustomSearchIT}
+     * 和{@see me.doshou.common.repository.UserRepositoryImplForDefaultSearchIT}
      *
      * @param ql
      * @param searchable     查询条件、分页 排序
@@ -95,8 +95,8 @@ public class RepositoryHelper {
 
     /**
      * <p>按条件统计<br/>
-     * 测试用例请参考：{@see com.sishuok.es.common.repository.UserRepositoryImplForCustomSearchIT}
-     * 和{@see com.sishuok.es.common.repository.UserRepositoryImplForDefaultSearchIT}
+     * 测试用例请参考：{@see me.doshou.common.repository.UserRepositoryImplForCustomSearchIT}
+     * 和{@see me.doshou.common.repository.UserRepositoryImplForDefaultSearchIT}
      *
      * @param ql
      * @param searchable
@@ -161,7 +161,7 @@ public class RepositoryHelper {
 
     /**
      * <p>根据ql和按照索引顺序的params执行ql，pageable存储分页信息 null表示不分页<br/>
-     * 具体使用请参考测试用例：{@see com.sishuok.es.common.repository.UserRepository2ImplIT#testFindAll()}
+     * 具体使用请参考测试用例：{@see me.doshou.common.repository.UserRepository2ImplIT#testFindAll()}
      *
      * @param ql
      * @param pageable null表示不分页
@@ -184,7 +184,7 @@ public class RepositoryHelper {
 
     /**
      * <p>根据ql和按照索引顺序的params执行ql，sort存储排序信息 null表示不排序<br/>
-     * 具体使用请参考测试用例：{@see com.sishuok.es.common.repository.UserRepository2ImplIT#testFindAll()}
+     * 具体使用请参考测试用例：{@see me.doshou.common.repository.UserRepository2ImplIT#testFindAll()}
      *
      * @param ql
      * @param sort   null表示不排序
@@ -204,7 +204,7 @@ public class RepositoryHelper {
 
     /**
      * <p>根据ql和按照索引顺序的params查询一个实体<br/>
-     * 具体使用请参考测试用例：{@see com.sishuok.es.common.repository.UserRepository2ImplIT#testFindOne()}
+     * 具体使用请参考测试用例：{@see me.doshou.common.repository.UserRepository2ImplIT#testFindOne()}
      *
      * @param ql
      * @param params
@@ -224,7 +224,7 @@ public class RepositoryHelper {
 
     /**
      * <p>根据ql和按照索引顺序的params执行ql统计<br/>
-     * 具体使用请参考测试用例：com.sishuok.es.common.repository.UserRepository2ImplIT#testCountAll()
+     * 具体使用请参考测试用例：me.doshou.common.repository.UserRepository2ImplIT#testCountAll()
      *
      * @param ql
      * @param params
@@ -241,7 +241,7 @@ public class RepositoryHelper {
 
     /**
      * <p>执行批处理语句.如 之间insert, update, delete 等.<br/>
-     * 具体使用请参考测试用例：{@see com.sishuok.es.common.repository.UserRepository2ImplIT#testBatchUpdate()}
+     * 具体使用请参考测试用例：{@see me.doshou.common.repository.UserRepository2ImplIT#testBatchUpdate()}
      *
      * @param ql
      * @param params

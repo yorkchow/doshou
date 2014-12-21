@@ -27,12 +27,12 @@
             frameborder="0" scrolling="no"
             src="about:blank" longdesc="${ctx}/admin/sys/user/tree"></iframe>
 </div>
-<div class="ui-layout-center tree">
+<div class="ui-layout-center tree" style="height: 100%">
     <iframe id="listFrame" name="listFrame" width="100%" height="100%"  frameborder="0" scrolling="auto"
             src="${ctx}/admin/sys/user/0/0"></iframe>
 </div>
 
-<es:contentFooter/>
+<doshou:contentFooter/>
 
 <script type="text/javascript">
 

@@ -2,6 +2,7 @@
 target
 log
 logs
+*.log
 *.bak
 *.iml
 *.bat

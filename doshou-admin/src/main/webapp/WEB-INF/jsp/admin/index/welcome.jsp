@@ -65,7 +65,7 @@
     <br/>
 
 </div>
-<es:contentFooter/>
+<doshou:contentFooter/>
 <%@include file="/WEB-INF/jsp/common/import-calendar-js.jspf"%>
 <script>
     $(function() {
