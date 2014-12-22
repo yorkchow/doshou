@@ -13,9 +13,9 @@ import javax.persistence.Entity;
 import javax.persistence.Table;
 
 /**
- * <p>User: Zhang Kaitao
- * <p>Date: 13-2-4 上午9:38
- * <p>Version: 1.0
+ * @author YorkChow<york.chow@actionsky.com>
+ * @since 2014/12/4
+ * Time: 23:01
  */
 @Entity
 @Table(name = "maintain_map")

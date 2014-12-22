@@ -16,9 +16,9 @@ import org.mozilla.javascript.EvaluatorException;
 import java.io.*;
 
 /**
- * <p>User: Zhang Kaitao
- * <p>Date: 13-6-9 上午11:50
- * <p>Version: 1.0
+ * @author YorkChow<york.chow@actionsky.com>
+ * @since 2014/12/4
+ * Time: 23:01
  */
 public class YuiCompressorUtils {
 

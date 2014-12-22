@@ -170,7 +170,7 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
-
+            <!--
             <dependency>
                 <groupId>org.springframework.data</groupId>
                 <artifactId>spring-data-jpa</artifactId>
@@ -182,7 +182,7 @@
                     </exclusion>
                 </exclusions>
             </dependency>
-
+            -->
             <!-- begin jdbc library -->
             <dependency>
                 <groupId>mysql</groupId>

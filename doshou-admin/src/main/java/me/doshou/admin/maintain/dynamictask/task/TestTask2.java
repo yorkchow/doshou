@@ -5,9 +5,9 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.stereotype.Service;
 
 /**
- * <p>User: Zhang Kaitao
- * <p>Date: 14-1-18
- * <p>Version: 1.0
+ * @author YorkChow<york.chow@actionsky.com>
+ * @since 2014/12/4
+ * Time: 23:01
  */
 public class TestTask2 {
 

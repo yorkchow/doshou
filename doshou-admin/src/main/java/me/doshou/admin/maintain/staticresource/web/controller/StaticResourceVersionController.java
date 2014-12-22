@@ -38,9 +38,9 @@ import java.util.regex.Pattern;
  *  所有需要版本控制的静态资源 以.jspf为后缀 放到webapp/WEB-INF/jsp/common下
  * 这样即可扫描这些文件实施版本控制
  *
- * <p>User: Zhang Kaitao
- * <p>Date: 13-6-7 下午2:26
- * <p>Version: 1.0
+ * @author YorkChow<york.chow@actionsky.com>
+ * @since 2014/12/4
+ * Time: 23:01
  */
 @Controller
 @RequestMapping("/admin/maintain/staticResource")

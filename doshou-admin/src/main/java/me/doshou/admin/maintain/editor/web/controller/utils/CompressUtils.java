@@ -18,9 +18,9 @@ import java.util.Enumeration;
 import java.util.List;
 
 /**
- * <p>User: Zhang Kaitao
- * <p>Date: 13-6-14 下午3:37
- * <p>Version: 1.0
+ * @author YorkChow<york.chow@actionsky.com>
+ * @since 2014/12/4
+ * Time: 23:01
  */
 public class CompressUtils {
 

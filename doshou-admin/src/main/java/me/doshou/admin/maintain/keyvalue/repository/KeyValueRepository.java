@@ -9,9 +9,9 @@ import me.doshou.common.repository.BaseRepository;
 import me.doshou.admin.maintain.keyvalue.entity.KeyValue;
 
 /**
- * <p>User: Zhang Kaitao
- * <p>Date: 13-2-4 下午3:00
- * <p>Version: 1.0
+ * @author YorkChow<york.chow@actionsky.com>
+ * @since 2014/12/4
+ * Time: 23:01
  */
 public interface KeyValueRepository extends BaseRepository<KeyValue, Long> {
 

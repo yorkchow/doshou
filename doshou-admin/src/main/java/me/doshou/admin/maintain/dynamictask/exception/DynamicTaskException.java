@@ -1,9 +1,9 @@
 package me.doshou.admin.maintain.dynamictask.exception;
 
 /**
- * <p>User: Zhang Kaitao
- * <p>Date: 14-1-17
- * <p>Version: 1.0
+ * @author YorkChow<york.chow@actionsky.com>
+ * @since 2014/12/4
+ * Time: 23:01
  */
 public class DynamicTaskException extends RuntimeException {
     public DynamicTaskException(String message, Throwable cause) {

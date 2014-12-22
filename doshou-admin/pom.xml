@@ -16,6 +16,7 @@
         <jetty.version>8.1.16.v20140903</jetty.version>
         <tomcat.maven.version>2.2</tomcat.maven.version>
         <yui.compressor.version>2.4.2</yui.compressor.version>
+        <spring.data.jpa.version>1.4.1.RELEASE</spring.data.jpa.version>
     </properties>
 
     <dependencies>
@@ -69,6 +70,7 @@
         <dependency>
             <groupId>org.springframework.data</groupId>
             <artifactId>spring-data-jpa</artifactId>
+            <version>${spring.data.jpa.version}</version>
         </dependency>
 
         <dependency>

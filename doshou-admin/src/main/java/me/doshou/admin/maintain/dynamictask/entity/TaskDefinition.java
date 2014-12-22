@@ -11,9 +11,9 @@ import javax.persistence.*;
 
 /**
  * 定时任务 beanName.beanMethod 和 beanClass.beanMethod 二选一
- * <p>User: Zhang Kaitao
- * <p>Date: 13-4-19 上午7:13
- * <p>Version: 1.0
+ * @author YorkChow<york.chow@actionsky.com>
+ * @since 2014/12/4
+ * Time: 23:01
  */
 @Entity
 @Table(name = "maintain_task_definition")

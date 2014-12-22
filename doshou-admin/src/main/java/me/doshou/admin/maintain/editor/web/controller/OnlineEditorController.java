@@ -49,9 +49,9 @@ import java.util.Map;
 import static me.doshou.admin.maintain.editor.web.controller.utils.OnlineEditorUtils.*;
 
 /**
- * <p>User: Zhang Kaitao
- * <p>Date: 13-6-9 下午8:09
- * <p>Version: 1.0
+ * @author YorkChow<york.chow@actionsky.com>
+ * @since 2014/12/4
+ * Time: 23:01
  */
 @Controller
 @RequestMapping("/admin/maintain/editor")

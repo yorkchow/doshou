@@ -43,7 +43,8 @@ public class HibernateUtils {
      * @return
      */
     public static SessionFactory getSessionFactory(EntityManagerFactory emf) {
-        return ((HibernateEntityManagerFactory) emf).getSessionFactory();
+        //return ((HibernateEntityManagerFactory) emf).getSessionFactory();
+        return emf.unwrap(SessionFactory.class);
     }
 
     /**

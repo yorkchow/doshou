@@ -1,6 +1,5 @@
 package me.doshou.web.service;
 
-import me.doshou.common.service.BaseService;
 import me.doshou.web.domain.Category;
 import me.doshou.web.repository.CategoryRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -35,7 +34,7 @@ public class CategoryService {
     }
 
     public Category findOne(Long catId) {
-        return categoryRepository.getOne(catId);
+        return categoryRepository.findOne(catId);
     }
 
     /**

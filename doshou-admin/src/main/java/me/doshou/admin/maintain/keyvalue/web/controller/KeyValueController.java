@@ -17,9 +17,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 /**
- * <p>User: Zhang Kaitao
- * <p>Date: 13-1-28 下午4:29
- * <p>Version: 1.0
+ * @author YorkChow<york.chow@actionsky.com>
+ * @since 2014/12/4
+ * Time: 23:01
  */
 @Controller
 @RequestMapping(value = "/admin/maintain/keyvalue")

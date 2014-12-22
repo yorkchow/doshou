@@ -26,9 +26,9 @@ import java.util.Map;
 import java.util.TreeMap;
 
 /**
- * <p>User: Zhang Kaitao
- * <p>Date: 13-5-27 下午6:50
- * <p>Version: 1.0
+ * @author YorkChow<york.chow@actionsky.com>
+ * @since 2014/12/4
+ * Time: 23:01
  */
 @Controller
 @RequestMapping("/admin/monitor/hibernate")

@@ -1,7 +1,6 @@
 package me.doshou.web.controller;
 
-import me.doshou.common.Constants;
-import me.doshou.common.web.controller.BaseController;
+import me.doshou.web.Constants;
 import me.doshou.web.domain.Category;
 import me.doshou.web.domain.Product;
 import me.doshou.web.service.CategoryService;
@@ -27,7 +26,7 @@ import java.util.List;
  */
 @Controller
 @RequestMapping(value = "/")
-public class ProductController extends BaseController<Product, Long> {
+public class ProductController {
 
     private static final Logger log = LoggerFactory.getLogger(ProductController.class);
 

@@ -27,9 +27,9 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * <p>User: Zhang Kaitao
- * <p>Date: 13-6-8 下午5:17
- * <p>Version: 1.0
+ * @author YorkChow<york.chow@actionsky.com>
+ * @since 2014/12/4
+ * Time: 23:01
  */
 @Controller
 @RequestMapping("/admin/monitor/ehcache")
