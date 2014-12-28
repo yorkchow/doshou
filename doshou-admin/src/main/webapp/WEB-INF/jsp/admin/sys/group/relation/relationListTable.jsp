@@ -20,7 +20,7 @@
     <tbody>
     <c:forEach items="${page.content}" var="m">
         <%--如果组织机构删除了 就没必要显示了--%>
-        <c:if test="${group.type eq 'organization' and esfn:existsOrganization(m.organizationId, onlyDisplayShow)}">
+        <c:if test="${group.type eq 'organization' and dsfn:existsOrganization(m.organizationId, onlyDisplayShow)}">
         <tr>
             <td class="check"><input type="checkbox" name="ids" value="${m.id}"></td>
             <c:if test="${group.type eq 'user'}">

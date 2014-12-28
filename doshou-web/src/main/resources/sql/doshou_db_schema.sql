@@ -52,6 +52,24 @@ create table `product`(
   INDEX `idx_product_sort_order` (`sort_order`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+-- -------------------------
+-- Table structure for store
+-- -------------------------
+DROP TABLE IF EXISTS `store`;
+create table `store`(
+  `id`            bigint UNSIGNED NOT NULL AUTO_INCREMENT,
+  `cat_id`        bigint NOT NULL DEFAULT 0,
+  `name`          varchar(255) NOT NULL DEFAULT '',
+  `url`           varchar(2000) NOT NULL DEFAULT '',
+  `img_url`       varchar(255) NOT NULL DEFAULT '',
+  `is_show`       tinyint(1) UNSIGNED NOT NULL DEFAULT 0,
+  `sort_order`    smallint(5) UNSIGNED NOT NULL DEFAULT 0,
+  `add_date`      date NOT NULL DEFAULT 0,
+  PRIMARY KEY (`id`),
+  INDEX `idx_product_cat_id` (`cat_id`),
+  INDEX `idx_product_sort_order` (`sort_order`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
 -- ---------------------------
 -- Table structure for config
 -- ---------------------------

@@ -23,7 +23,7 @@
         <dependency>
             <groupId>me.doshou</groupId>
             <artifactId>doshou-common</artifactId>
-            <version>${project.version}</version>
+            <version>${parent.version}</version>
         </dependency>
 
         <!-- begin spring library -->

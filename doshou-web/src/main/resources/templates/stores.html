@@ -82,31 +82,25 @@
                 <div class="container">
                     <div class="row">
                         <div id="mainmasonry">
-                            <!-- Product List -->
-                            <div th:each="product : ${products}" class="col-xs-12 col-sm-6 col-md-4 bump">
+                            <!-- Store List -->
+                            <div th:each="store : ${stores}" class="col-xs-12 col-sm-6 col-md-4 bump">
                                 <div class="colored nopbump rel">
                                     <div class="post type-post status-publish format-image has-post-thumbnail hentry category-photography tag-animals tag-doggy"></div>
                                     <div class="singlecp bumpsm dark">
-                                        <a th:href="${product.url}" target="_blank">
-                                            <img th:src="@{/images/pixel.jpg}" th:attr="data-url=${product.imgUrl}" class="loadingImg img-responsive opac"/>
+                                        <a th:href="${store.url}" target="_blank">
+                                            <img th:src="@{/images/pixel.jpg}" th:attr="data-url=${store.imgUrl}" class="loadingImg img-responsive opac"/>
                                         </a>
                                     </div>
 
                                     <div class="post-text-grip topbtmbumpmin">
-                                        <p><a class="read-more" th:href="${product.url}" th:text="${product.brief}" target="_blank">[...]</a></p>
-                                        <p style="margin-top:15px">
-                                            <a th:href="${product.url}" class="btn btn-danger" role="button" target="_blank" style="float: right;">去抢购</a>
-                                            <span style="font-size: 2em;" th:text="@{'¥'+${#numbers.formatDecimal(product.shopPrice/100,1,1)}}">¥0</span>
-                                            <del th:text="@{'¥'+${#numbers.formatDecimal(product.marketPrice/100,1,1)}}">¥0</del>
-                                            <span class="glyphicon glyphicon-tag" style="padding: 10px;color: #d9534f;"
-                                                  th:text="@{${#numbers.formatDecimal(product.shopPrice*10.0/product.marketPrice,1,1)}+'折'}">7折</span>
+                                        <p>
+                                            <a class="read-more" th:href="${store.url}" th:text="${store.name}" target="_blank"></a>
+                                            <a th:href="${store.url}" class="btn btn-danger" role="button" target="_blank" style="float: right;">去看看</a>
                                         </p>
                                     </div>
 
                                     <div class="post-text-grip linetop-pads">
-                                        <div class="infodiv accent pull-left bumpright" th:text="${{product.addDate}}"></div>
-                                        <div class="infodiv fa fa-comments pull-right" th:text="${product.comments}">13</div>
-                                        <div class="infodiv fa fa-shopping-cart pull-right" th:text="${product.sales}">213</div>
+                                        <div class="infodiv accent pull-left bumpright" th:text="${{store.addDate}}"></div>
                                     </div>
 
                                 </div><!--colored-->
@@ -134,7 +128,6 @@
             </section>
 
             <footer th:include="fragments/footer :: footer" class="section-wrap-footerbase linetop footercolor stickystopper" />
-
 
         </div><!--shadow-->
     </div><!--margin-->
