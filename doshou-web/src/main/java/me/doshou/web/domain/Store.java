@@ -6,14 +6,14 @@ import javax.persistence.*;
 import java.util.Date;
 
 /**
- * 商品实体类
+ * 店铺实例类
  *
- * @author: York Chow<york.chow@actionsky.com>
- * @since: 2014/11/21
- * Time: 22:36
+ * @author YorkChow<york.chow@actionsky.com>
+ * @since 2014/12/27
+ * Time: 21:39
  */
 @Entity
-public class Product {
+public class Store {
 
     @Id
     @GeneratedValue
@@ -24,31 +24,13 @@ public class Product {
     private Category category;
 
     @Column(nullable=false)
-    private String brief;
+    private String name;
 
     @Column(nullable = false)
     private String url;
 
     @Column(name="img_url")
     private String imgUrl;
-
-    @Column(name = "market_price")
-    private Integer marketPrice;    /** 市场价（原价）*/
-
-    @Column(name = "shop_price")
-    private Integer shopPrice;      /** 现价 */
-
-    @Column(nullable = false)
-    private Integer sales;          /** （月）销量 */
-
-    @Column(nullable = false)
-    private Integer comments;       /** （累计）评论数 */
-
-    @Column(name="is_best")
-    private Boolean isBest = Boolean.FALSE;         /** 是否精品 */
-
-    @Column(name="is_hot")
-    private Boolean isHot = Boolean.FALSE;          /** 是否热卖 */
 
     @Column(name = "is_show")
     private Boolean isShow = Boolean.FALSE;         /** 是否显示，删除的设置False */
@@ -77,12 +59,12 @@ public class Product {
         this.category = category;
     }
 
-    public String getBrief() {
-        return brief;
+    public String getName() {
+        return name;
     }
 
-    public void setBrief(String brief) {
-        this.brief = brief;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getUrl() {
@@ -99,54 +81,6 @@ public class Product {
 
     public void setImgUrl(String imgUrl) {
         this.imgUrl = imgUrl;
-    }
-
-    public Integer getMarketPrice() {
-        return marketPrice;
-    }
-
-    public void setMarketPrice(Integer marketPrice) {
-        this.marketPrice = marketPrice;
-    }
-
-    public Integer getShopPrice() {
-        return shopPrice;
-    }
-
-    public void setShopPrice(Integer shopPrice) {
-        this.shopPrice = shopPrice;
-    }
-
-    public Integer getSales() {
-        return sales;
-    }
-
-    public void setSales(Integer sales) {
-        this.sales = sales;
-    }
-
-    public Integer getComments() {
-        return comments;
-    }
-
-    public void setComments(Integer comments) {
-        this.comments = comments;
-    }
-
-    public Boolean getIsBest() {
-        return isBest;
-    }
-
-    public void setIsBest(Boolean isBest) {
-        this.isBest = isBest;
-    }
-
-    public Boolean getIsHot() {
-        return isHot;
-    }
-
-    public void setIsHot(Boolean isHot) {
-        this.isHot = isHot;
     }
 
     public Boolean getIsShow() {

@@ -75,25 +75,25 @@ $.app = {
         });
         $(".btn-view-message,.btn-message").click(function() {
             var url = ctx + "/admin/personal/message";
-            setTimeout(function() {
+            /*setTimeout(function() {
                 $.tabs.activeTab($.tabs.nextCustomTabIndex(), "我的消息", url, true)
-            }, 0);
+            }, 0);*/
         });
         $(".btn-view-notice").click(function() {
             var url = ctx + "/office/personal/notice/list?read=false";
-            setTimeout(function() {
+            /*setTimeout(function() {
                 $.tabs.activeTab($.tabs.nextCustomTabIndex(), "我的通知", url, true)
-            }, 0);
+            }, 0);*/
         });
         $(".btn-view-worklist,.btn-view-work").click(function() {
             var $that = $(this);
             var url = ctx + "/office/personal/worklist";
-            setTimeout(function() {
+            /*setTimeout(function() {
                 if($that.is(".btn-view-work")) {
                     url = $that.data("url");
                 }
                 $.tabs.activeTab($.tabs.nextCustomTabIndex(), "我的待办工作", url, true)
-            }, 0);
+            }, 0);*/
 
             return false;
         });

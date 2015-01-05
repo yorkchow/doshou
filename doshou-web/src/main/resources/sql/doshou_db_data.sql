@@ -34,6 +34,14 @@ insert into product values
 (1024, 1005, '【三只松鼠_碧根果】零食坚果特产美国山核桃长寿果奶油味210gx2', 'http://www.tmall.com', '/images/upload/1024.jpg', 8900, 2990, 810598, 680052, 1, 1, 1, 22, '2014-10-28'),
 (1025, 1005, '【包邮】水星家纺 被子 冬被 保暖加厚被芯 正品四孔纤维被 双人特价', 'http://www.tmall.com', '/images/upload/1025.jpg', 63000, 13800, 15106, 53712, 1, 1, 1, 24, '2014-11-11');
 
+insert into store values
+(1001, 1001, '初语旗舰店', 'http://www.tmall.com', '/images/upload/1001.jpg', 1, 1, '2014-05-10'),
+(1002, 1003, '多彩汇旗舰店', 'http://www.tmall.com', '/images/upload/1006.jpg', 1, 2, '2014-05-10'),
+(1003, 1002, '花笙记旗舰店', 'http://www.tmall.com', '/images/upload/1011.jpg', 1, 3, '2014-06-10'),
+(1004, 1004, '御泥坊旗舰店', 'http://www.tmall.com', '/images/upload/1016.jpg', 1, 4, '2014-07-10'),
+(1005, 1004, '朵拉旗舰店', 'http://www.tmall.com', '/images/upload/1019.jpg', 1, 5, '2014-08-10'),
+(1006, 1005, '三只松鼠旗舰店', 'http://www.tmall.com', '/images/upload/1023.jpg', 1, 6, '2014-09-10');
+
 insert into config values
 (1, 'title', '剁手么 有态度的电商产品评测网站'),
 (2, 'keywords', '剁手么 网购导航 双11 最好的网购导航');

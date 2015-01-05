@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 /**
- * Function details
+ * Product Service
  *
  * @author: York Chow<york.chow@actionsky.com>
  * @since: 2014/11/21
