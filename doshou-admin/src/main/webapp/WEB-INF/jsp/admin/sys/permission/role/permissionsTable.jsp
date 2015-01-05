@@ -10,7 +10,7 @@
     <tbody>
     <c:set var="count" value="0"/>
     <c:forEach items="${role.resourcePermissions}" var="o">
-        <c:if test="${esfn:existsResource(o.resourceId, onlyDisplayShow)}">
+        <c:if test="${dsfn:existsResource(o.resourceId, onlyDisplayShow)}">
             <c:set var="count" value="${count+1}"/>
             <tr>
                 <td>
@@ -20,7 +20,7 @@
                   <span style="line-height: 30px;">
                   <c:set var="permissionCount" value="0"/>
                   <c:forEach items="${o.permissionIds}" var="permissionId" varStatus="status">
-                      <c:if test="${esfn:existsPermission(permissionId, onlyDisplayShow)}">
+                      <c:if test="${dsfn:existsPermission(permissionId, onlyDisplayShow)}">
                           <c:set var="permissionCount" value="${permissionCount + 1}"/>
                           <c:if test="${permissionCount > 1}">|</c:if>
                           <sys:showPermissionName id="${permissionId}"/>

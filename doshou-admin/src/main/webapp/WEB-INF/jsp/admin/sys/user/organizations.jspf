@@ -9,7 +9,7 @@
     <tbody>
     <c:set var="count" value="0"/>
     <c:forEach items="${user.displayOrganizationJobs}" var="o">
-        <c:if test="${esfn:existsOrganization(o.key, onlyDisplayShow)}">
+        <c:if test="${dsfn:existsOrganization(o.key, onlyDisplayShow)}">
             <c:set var="count" value="${count+1}"/>
             <tr>
                 <td>
@@ -17,7 +17,7 @@
                 </td>
                 <td>
                     <c:forEach items="${o.value}" var="oj">
-                        <c:if test="${esfn:existsJob(oj.jobId, onlyDisplayShow)}">
+                        <c:if test="${dsfn:existsJob(oj.jobId, onlyDisplayShow)}">
                             <sys:showJobName id="${oj.jobId}"/><br/>
                         </c:if>
                     </c:forEach>

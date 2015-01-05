@@ -52,7 +52,7 @@
                 <span style="line-height: 30px">
                 <c:set var="count" value="0"/>
                 <c:forEach items="${m.roleIds}" var="roleId">
-                    <c:if test="${esfn:existsRole(roleId, onlyDisplayShow)}">
+                    <c:if test="${dsfn:existsRole(roleId, onlyDisplayShow)}">
                         <c:set var="count" value="${count + 1}"/>
                         <c:if test="${count > 1}">|</c:if>
                         <sys:showRoleName id="${roleId}"/>

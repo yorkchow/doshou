@@ -154,7 +154,7 @@
                 </thead>
                 <tbody>
                 <c:forEach items="${m.resourcePermissions}" var="o">
-                    <c:if test="${esfn:existsResource(o.resourceId, onlyDisplayShow)}">
+                    <c:if test="${dsfn:existsResource(o.resourceId, onlyDisplayShow)}">
                         <tr>
                             <td class="check"><input type="checkbox"></td>
                             <td>
@@ -166,7 +166,7 @@
                             <c:set var="permissionIds" value=""/>
                             <c:set var="count" value="0"/>
                             <c:forEach items="${o.permissionIds}" var="permissionId">
-                                <c:if test="${esfn:existsPermission(permissionId, onlyDisplayShow)}">
+                                <c:if test="${dsfn:existsPermission(permissionId, onlyDisplayShow)}">
                                     <c:set var="count" value="${count+1}"/>
                                     <c:set var="permissionIds" value="${permissionIds}${count == 1 ? '' : ','}${permissionId}"/>
                                     <c:if test="${status.count > 1}">|</c:if>
