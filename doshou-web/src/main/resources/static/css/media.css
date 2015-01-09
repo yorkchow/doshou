@@ -52,13 +52,14 @@
 	}
 	
 	@media screen and (max-width:568px) {
-	input#submit,.form-submit {
-		width:100%!important;
-	}
-	
-	input#email,input#url,input#author {
-		width:100%!important;
-	}
+        input#submit, .form-submit {
+            width: 100% !important;
+        }
+
+        input#email, input#url, input#author {
+            width: 100% !important;
+        }
+    }
 }
 
 /*end media */
